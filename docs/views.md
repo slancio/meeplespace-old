@@ -1,26 +1,22 @@
 # View Wireframes
 
-## New Session
-![new-session]
+## Landing Page
+![landing-page]
 
-## Feed Show (landing page)
-![feed-show]
+## City Page
+![city-page]
 
-## Blog Show
-![blog-show]
+## Profile Page
+![profile-page]
 
-## Post Show
-![post-show]
+## City Calendar
+![city-calendar]
 
-## Post Form
-![post-form]
+## Account Page
+![account-page]
 
-## Search Results
-![search-results]
-
-[new-session]: ./wireframes/new_session.png
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+[landing-page]: ./wireframes/frontpage.png
+[city-page]: ./wireframes/citypage.png
+[profile-page]: ./wireframes/profilepage.png
+[city-calendar]: ./wireframes/citycalendar.png
+[account-page]: ./wireframes/accountpage.png
