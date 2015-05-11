@@ -1,9 +1,11 @@
-# Phase 3: Editing and Displaying Posts
+# Phase 3: Editing Events and Profiles
 
 ## Rails
 ### Models
 
 ### Controllers
+Api::UsersController (edit, update)
+Api::EventsController (edit, update)
 
 ### Views
 
@@ -13,9 +15,11 @@
 ### Collections
 
 ### Views
-* PostForm
+* UserForm
+* UserShow
+* CityHostShow (composite view, contains CityIndex subview)
+* CityIndex (composite view, contains CityIndexItem subviews)
+* CityIndexItem
 
 ## Gems/Libraries
 * Filepicker
-* Markdown-js
-* Bootstrap Markdown

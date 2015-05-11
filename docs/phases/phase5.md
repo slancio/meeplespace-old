@@ -1,11 +1,9 @@
-# Phase 5: Searching for Blogs and Posts
+# Phase 5: Email notifications and CSS
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
 
 ### Views
 
@@ -19,4 +17,4 @@ Api::PostsController (search)
 * SearchShow (composite view, contains BlogsIndex and PostsIndex subviews)
 
 ## Gems/Libraries
-
+ActionMailer or Pony

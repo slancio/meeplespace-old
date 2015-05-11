@@ -1,39 +1,11 @@
 # Schema Information
 
-## blogs
+## cities
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-owner_id    | integer   | not null, foreign key (references users)
-title       | string    | not null
-
-## followings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-blog_id     | integer   | not null, foreign key (references blogs)
-follower_id | integer   | not null, foreign key (references users)
-
-## posts
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users)
-title       | string    | not null
-body        | string    |
-
-## tags
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-label       | string    | not null, unique
-
-## taggings
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-post_id     | integer   | not null, foreign key (references posts)
-tag_id      | integer   | not null, foreign key (references tags)
+name        | string    | not null
+img_url     | string    | not null
 
 ## users
 column name     | data type | details
@@ -42,4 +14,28 @@ id              | integer   | not null, primary key
 email           | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
+city_id         | integer   | not null, foreign key
+host            | boolean   | not null, default false
+avatar_url      | string    | not null
+short_desc      | text      |
+long_desc       | text      |
 
+## events
+column name      | data type | details
+-----------------|-----------|-----------------------
+id               | integer   | not null, primary key
+host_id          | integer   | not null, foreign key (references users)
+date             | date      | not null
+location         | string    | not null
+location_privacy | boolean   | not null, default false
+slots            | integer   | not null
+game_title       | string    | not null
+game_id          | integer   |
+game_img_url     | string    |
+
+## outings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+event_id    | integer   | not null, foreign key (references events)
+user_id     | integer   | not null, foreign key (referenecs users)

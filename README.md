@@ -1,24 +1,35 @@
-# Flux-capacitr
+# meeple.space
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: https://meeplespace.herokuapp.com
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+Meeple.space is a clone of Meetup for playing board games built on Rails and Backbone. 
 
-<!-- This is a Markdown checklist. Use it to keep track of your progress! -->
+Non-Users can:
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] View Cities
+- [ ] View Hosts
+- [ ] View Upcoming Events
+- [ ] Create accounts
+
+Users can also:
+
+- [ ] Create sessions (log in)
+- [ ] Sign up for Upcoming Event Slots
+- [ ] Sign up for Upcoming Event Waitlists
+- [ ] Sign up to Host Events
+- [ ] View their Event Calendar
+- [ ] Create a Public Profile
+
+Hosts can also:
+
+- [ ] Create an Event
+- [ ] Give Event a Date and Location
+- [ ] Set an Event's Game_ID(BGG XML API)
+- [ ] Make an event location public or private to non-attendees
+- [ ] Send Event Reminders
 
 ## Design Docs
 * [View Wireframes][views]
@@ -29,59 +40,40 @@ Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
 
 ## Implementation Timeline
 
-### Phase 1: User Authentication, Blog Creation (~1 day)
-I will implement user authentication in Rails based on the practices learned at
-App Academy. By the end of this phase, users will be able to create blogs using
-a simple text form in a Rails view. The most important part of this phase will
-be pushing the app to Heroku and ensuring that everything works before moving on
-to phase 2.
+### Phase 1: User Authentication, Profiles (~1 day)
+I will implement user authentication in Rails based on the practices learned at App Academy. By the end of this phase, users will be able to create an account, sign in and update their account information using Rails views. The most important part of this phase will be pushing the app to Heroku and ensuring that everything works before moving on to phase 2.
 
 [Details][phase-one]
 
-### Phase 2: Viewing Blogs and Posts (~2 days)
-I will add API routes to serve blog and post data as JSON, then add Backbone
-models and collections that fetch data from those routes. By the end of this
-phase, users will be able to create blogs and view both blogs and posts, all
-inside a single Backbone app.
+### Phase 2: Creating Events (~2 days)
+I will allow users to make themselves a host and
+create events through API routes and Backbone views. By the end of this phase, users will be able to create and view events.  Games will be given just a string (address) location for now until Google API lookups are implemented in a later phase.
 
 [Details][phase-two]
 
-### Phase 3: Editing and Displaying Posts (~2 days)
-I plan to use third-party libraries to add functionality to the `PostForm` and
-`PostShow` views in this phase. First I'll need to add a Markdown editor to the
-`PostForm`, and make sure that the Markdown is properly escaped and formatted in
-the `PostShow` view. I also plan to integrate Filepicker for file upload so
-users can add images to blog posts.
+### Phase 3: Editing Events and Profiles (~1 day)
+I will integrate Filepicker to allow users to upload images for their profiles or events.  I will improve the forms here and make sure that all of the features until now work solidly.
 
 [Details][phase-three]
 
-### Phase 4: User Feeds (~1-2 days)
-I'll start by adding a `feed` route that uses the `current_user`'s
-`subscribed_blogs` association to serve a list of blog posts ordered
-chronologically. On the Backbone side, I'll make a `FeedShow` view whose `posts`
-collection fetches from the new route.  Ultimately, this will be the page users
-see after logging in.
+### Phase 4: External API Integration (~2-3 days)
+In this phase I will implement Google Maps/Places API integration to allow users to set validated locations and display a small map.  I will also allow users to lookup games in the BoardGameGeek XML API and overwrite the title and img fields for games.
 
 [Details][phase-four]
 
-### Phase 5: Searching for Blogs and Posts (~2 days)
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+### Phase 5: Email notifications and CSS (~2 day)
+I'll add the ability for the app to automatically send users reminder emails for their upcoming events. This is where I'll also do a final pass on the CSS and try to make sure the design of the site is solid. 
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
-- [ ] Multiple sessions/session management
-- [ ] User avatars
-- [ ] Typeahead search bar
+- [ ] Set Notification preferences
+- [ ] Comments/Images for Completed Events
+- [ ] Allow Non-Users to sign up and join event at same time
+- [ ] View Own Past Events
+- [ ] Hosts can set "Potential Games" with Attendee Polls
+- [ ] Multiple Sessions
+- [ ] Link to Facebook
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
