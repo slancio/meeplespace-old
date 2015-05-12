@@ -31,6 +31,7 @@ Hosts can also:
 - [ ] Make an event location public or private to non-attendees
 - [ ] Send Event Reminders
 
+
 ## Design Docs
 * [View Wireframes][views]
 * [DB schema][schema]
@@ -52,7 +53,7 @@ create events through API routes and Backbone views. By the end of this phase, u
 [Details][phase-two]
 
 ### Phase 3: Editing Events and Profiles (~1 day)
-I will integrate Filepicker to allow users to upload images for their profiles or events.  I will improve the forms here and make sure that all of the features until now work solidly.
+I will integrate Paperclip to allow users to upload images for their profiles or events.  I will improve the forms here and make sure that all of the features until now work solidly.
 
 [Details][phase-three]
 
@@ -61,13 +62,12 @@ In this phase I will implement Google Maps/Places API integration to allow users
 
 [Details][phase-four]
 
-### Phase 5: Email notifications and CSS (~2 day)
-I'll add the ability for the app to automatically send users reminder emails for their upcoming events. This is where I'll also do a final pass on the CSS and try to make sure the design of the site is solid. 
+### Phase 5: Notifications, Email Reminders and CSS (~2 day)
+Add Notifications to application. I'll also add the ability for the app to automatically send users reminder emails for their upcoming events. This is where I'll also do a final pass on the CSS and try to make sure the design of the site is solid. 
 
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] Set Notification preferences
 - [ ] Comments/Images for Completed Events
 - [ ] Allow Non-Users to sign up and join event at same time
 - [ ] View Own Past Events

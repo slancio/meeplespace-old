@@ -22,4 +22,4 @@ Api::EventsController (edit, update)
 * CityIndexItem
 
 ## Gems/Libraries
-* Filepicker
+* Paperclip

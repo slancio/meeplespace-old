@@ -2,6 +2,8 @@
 
 ## Rails
 ### Models
+* Event
+* Game
 
 ### Controllers
 Api::UsersController (create, destroy, index, show)
@@ -15,10 +17,12 @@ Api::EventsController (create, destroy, index, show)
 ### Models
 * Event
 * User
+* Game
 
 ### Collections
 * Events
 * Users
+* Games
 
 ### Views
 * EventForm
@@ -26,6 +30,7 @@ Api::EventsController (create, destroy, index, show)
 * CityEventShow (composite view, contains EventIndex subview)
 * EventIndex (composite view, contains EventIndexItem subviews)
 * EventIndexItem
+* GameShow
 
 
 ## Gems/Libraries

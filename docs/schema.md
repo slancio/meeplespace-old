@@ -29,9 +29,23 @@ date             | date      | not null
 location         | string    | not null
 location_privacy | boolean   | not null, default false
 slots            | integer   | not null
-game_title       | string    | not null
-game_id          | integer   |
-game_img_url     | string    |
+game_id          | integer   | not null, foreign key (references game)
+
+## games
+column name  | data type | details
+-------------|-----------|-----------------------
+id           | integer   | not null, primary key
+title        | string    | not null
+img_url      | string    |
+
+## comments
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users)
+event_id    | integer   | not null, foreign key (references events)
+img_url     | string    |
+text        | text      |
 
 ## outings
 column name | data type | details
@@ -39,3 +53,4 @@ column name | data type | details
 id          | integer   | not null, primary key
 event_id    | integer   | not null, foreign key (references events)
 user_id     | integer   | not null, foreign key (referenecs users)
+

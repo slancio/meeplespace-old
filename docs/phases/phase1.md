@@ -4,7 +4,6 @@
 ### Models
 * City
 * User
-* Event
 
 ### Controllers
 * UsersController (create, new)
@@ -23,3 +22,6 @@
 
 ## Gems/Libraries
 annotate
+better_errors
+binding_of_caller
+newrelic_rpm
