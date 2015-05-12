@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  before_action :require_signed_in!, only: [:edit, :update, :destroy]
   before_action :verify_owner, only: [:edit, :update, :destroy]
 
   def new

@@ -1,0 +1,23 @@
+<header class="header">
+</header>
+
+<nav class="nav">
+  <ul class="nav-list group">
+  <% if signed_in? %>
+    <li class="nav-item">
+      <%= link_to "Logout", session_url, method: :delete %>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <% link_to "Login", new_session_url %></li>
+    </li>
+  <% end %>
+  </ul>
+</nav>
+
+<main class="content">
+  <% if signed_in? %>
+  <% else %>
+    <%= render partial: "users/form", user: User.new %>
+  <% end %>
+</main>
