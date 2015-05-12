@@ -35,9 +35,11 @@ Hosts can also:
 ## Design Docs
 * [View Wireframes][views]
 * [DB schema][schema]
+* [Stock images attribution][attrib]
 
 [views]: ./docs/views.md
 [schema]: ./docs/schema.md
+[attrib]: ./docs/attrib.md
 
 ## Implementation Timeline
 
@@ -74,6 +76,7 @@ Add Notifications to application. I'll also add the ability for the app to autom
 - [ ] Hosts can set "Potential Games" with Attendee Polls
 - [ ] Multiple Sessions
 - [ ] Link to Facebook
+- [ ] Make an attribution page for stock images used
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
