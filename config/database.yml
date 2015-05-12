@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: meeplespace_production
-  username: meeplespace
-  password: <%= ENV['MEEPLESPACE_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: meeplespace_production
+#   username: meeplespace
+#   password: <%= ENV['MEEPLESPACE_DATABASE_PASSWORD'] %>
