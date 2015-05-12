@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use NewRelic RPM for Heroku
 gem 'newrelic_rpm'
 
+# Use rails_12factor on Heroku
+gem 'rails_12factor'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

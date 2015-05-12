@@ -12,3 +12,9 @@
 !/log/.keep
 /tmp
 .DS_Store
+
+# Environment normalization:
+/.bundle
+/vendor/bundle
+Gemfile.lock
+.ruby-version
