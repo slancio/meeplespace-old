@@ -20,8 +20,13 @@
 
 ### Views
 
-## Gems/Libraries
-annotate
-better_errors
-binding_of_caller
-newrelic_rpm
+### Gems/Libraries
+#### Development
+*annotate
+*better_errors
+*binding_of_caller
+*pry-rails
+#### Production
+*newrelic_rpm
+*rails_12factor
+*bcrypt
