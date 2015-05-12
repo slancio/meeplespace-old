@@ -5,11 +5,15 @@
   <ul class="nav-list group">
   <% if signed_in? %>
     <li class="nav-item">
-      <%= link_to "Logout", session_url, method: :delete %>
+      <form action="<%= session_url %>" method="post">
+        <%= auth_token %>
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Logout</button>
+      </form>
     </li>
   <% else %>
     <li class="nav-item">
-      <% link_to "Login", new_session_url %></li>
+      <a href="<%= new_session_url %>">Login</a>
     </li>
   <% end %>
   </ul>
@@ -18,6 +22,7 @@
 <main class="content">
   <% if signed_in? %>
   <% else %>
-    <%= render partial: "users/form", user: User.new %>
+    <h1>Sign Up</h1>
+    <%= render "users/form", user: @user %>
   <% end %>
 </main>
