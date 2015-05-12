@@ -3,9 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :auth_token
 
   private
+
+    def auth_token
+      <<-HTML.html_safe
+        <input type="hidden" name="authenticity_token" value="#{form_authenticity_token}">
+      HTML
+    end
 
     def current_user
       return nil unless session[:session_token]
