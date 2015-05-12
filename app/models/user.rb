@@ -9,6 +9,7 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  city_id         :integer          not null
 #
 
 class User < ActiveRecord::Base
@@ -16,9 +17,12 @@ class User < ActiveRecord::Base
   validates :email, :session_token, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :nickname, presence: true
+  validates :city_id, presence: true
 
   attr_reader :password
   after_initialize :ensure_session_token
+
+  belongs_to :city
 
   def self.find_by_credentials(user_params)
     user = User.find_by(email: user_params[:email])

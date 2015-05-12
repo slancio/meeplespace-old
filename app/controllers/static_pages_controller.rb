@@ -5,5 +5,6 @@ class StaticPagesController < ApplicationController
     else
       @user = current_user
     end
+      @cities = City.all
   end
 end

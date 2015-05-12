@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   before_action :verify_owner, only: [:edit, :update, :destroy]
 
   def new
+    @user = User.new
+    @cities = City.all
     render :new
   end
 
@@ -27,6 +29,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @cities = City.all
     render :edit
   end
 
@@ -43,7 +46,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:email, :nickname, :password)
+      params.require(:user).permit(:email, :nickname, :city_id, :password)
     end
 
     def verify_owner
