@@ -2,6 +2,7 @@
 
 ## Rails
 ### Models
+* Game
 
 ### Controllers
 * Api::GameController (create, show)

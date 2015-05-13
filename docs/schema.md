@@ -38,6 +38,7 @@ column name  | data type | details
 id           | integer   | not null, primary key
 title        | string    | not null
 img_url      | string    |
+bgg_id       | integer   |
 
 ## comments
 column name | data type | details

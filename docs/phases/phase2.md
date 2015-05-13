@@ -3,7 +3,6 @@
 ## Rails
 ### Models
 * Event
-* Game
 
 ### Controllers
 * Api::UsersController (create, destroy, index, show)
