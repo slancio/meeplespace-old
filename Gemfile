@@ -32,9 +32,8 @@ gem 'newrelic_rpm'
 # Use rails_12factor on Heroku
 gem 'rails_12factor'
 
-# Backbone + Marionette
+# Backbone
 gem 'backbone-on-rails'
-gem 'marionette-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
