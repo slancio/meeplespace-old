@@ -4,7 +4,10 @@ window.Meeplespace = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+
+    this.currentUser = new Meeplespace.Models.CurrentUser();
+    this.currentUser.fetch();
+    
   }
 };
 

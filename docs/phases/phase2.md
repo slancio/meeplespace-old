@@ -31,4 +31,3 @@
 
 ## Gems/Libraries
 backbone-on-rails
-marionette-rails
