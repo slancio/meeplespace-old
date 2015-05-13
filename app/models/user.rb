@@ -25,6 +25,11 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   belongs_to :city
+  has_many :hosted_events,
+    class_name: "Event",
+    foreign_key: :host_id,
+    primary_key: :id,
+    inverse_of: :event_host
 
   def self.find_by_credentials(user_params)
     user = User.find_by(email: user_params[:email])

@@ -11,8 +11,10 @@
 
 ## Backbone
 ### Models
+* Game
 
 ### Collections
+* Games
 
 ### Views
 * EventLocation

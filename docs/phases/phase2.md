@@ -17,12 +17,10 @@
 ### Models
 * Event
 * User
-* Game
 
 ### Collections
 * Events
 * Users
-* Games
 
 ### Views
 * (Make all of these Marionette Views)

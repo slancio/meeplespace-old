@@ -13,4 +13,18 @@
 #
 
 class Event < ActiveRecord::Base
+  validates :date, presence: true
+  validates :location, presence: true
+  validates :location_privacy, presence: true
+  validates :slots, presence: true
+  validates :host_id, presence: true
+
+  belongs_to :event_host,
+    class_name: "User",
+    foreign_key: :host_id,
+    primary_key: :id,
+    inverse_of: :hosted_events
+
+  default_scope { order(date: :desc) }
+
 end
