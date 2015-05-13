@@ -4,8 +4,10 @@
 ### Models
 
 ### Controllers
+* Api::GameController (create, show)
 
 ### Views
+* game/show.json.jbuilder
 
 ## Backbone
 ### Models
@@ -15,6 +17,7 @@
 ### Views
 * EventLocation
 * EventGame
+* GameShow
 
 ## Gems/Libraries
 Geocoder

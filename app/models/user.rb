@@ -10,6 +10,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  city_id         :integer          not null
+#  host            :boolean          default(FALSE), not null
 #
 
 class User < ActiveRecord::Base
@@ -18,6 +19,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :nickname, presence: true
   validates :city_id, presence: true
+  validates :host, presence: true
 
   attr_reader :password
   after_initialize :ensure_session_token

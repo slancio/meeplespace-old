@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150512184416) do
+ActiveRecord::Schema.define(version: 20150513160551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,16 +25,31 @@ ActiveRecord::Schema.define(version: 20150512184416) do
 
   add_index "cities", ["name"], name: "index_cities_on_name", unique: true, using: :btree
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "nickname",        null: false
-    t.string   "password_digest", null: false
-    t.string   "session_token",   null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "city_id",         null: false
+  create_table "events", force: :cascade do |t|
+    t.date     "date",                             null: false
+    t.string   "location",                         null: false
+    t.boolean  "location_privacy", default: false, null: false
+    t.integer  "slots",                            null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "host_id",                          null: false
   end
 
+  add_index "events", ["date"], name: "index_events_on_date", using: :btree
+  add_index "events", ["host_id"], name: "index_events_on_host_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                           null: false
+    t.string   "nickname",                        null: false
+    t.string   "password_digest",                 null: false
+    t.string   "session_token",                   null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "city_id",                         null: false
+    t.boolean  "host",            default: false, null: false
+  end
+
+  add_index "users", ["city_id"], name: "index_users_on_city_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

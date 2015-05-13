@@ -6,15 +6,12 @@
 * Game
 
 ### Controllers
-
-Api::UsersController (create, destroy, index, show)
-Api::EventsController (create, destroy, index, edit, update, show)
-Api::GameController (create, show)
+* Api::UsersController (create, destroy, index, show)
+* Api::EventsController (create, destroy, index, edit, update, show)
 
 ### Views
 * users/show.json.jbuilder
 * events/show.json.jbuilder
-* game/show.json.jbuilder
 
 ## Backbone
 ### Models
@@ -34,8 +31,6 @@ Api::GameController (create, show)
 * CityEventShow (composite view, contains EventIndex subview)
 * EventIndex (composite view, contains EventIndexItem subviews)
 * EventIndexItem
-* GameShow
-
 
 ## Gems/Libraries
 backbone-on-rails

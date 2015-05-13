@@ -10,6 +10,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  city_id         :integer          not null
+#  host            :boolean          default(FALSE), not null
 #
 
 require 'test_helper'

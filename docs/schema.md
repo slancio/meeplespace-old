@@ -25,12 +25,12 @@ long_desc       | text      |
 column name      | data type | details
 -----------------|-----------|-----------------------
 id               | integer   | not null, primary key
-host_id          | integer   | not null, foreign key (references users)
 date             | date      | not null
 location         | string    | not null
 location_privacy | boolean   | not null, default false
 slots            | integer   | not null
-game_id          | integer   | not null, foreign key (references game)
+host_id          | integer   | not null, foreign key (references users)
+game_id          | integer   | not null, foreign key (references games)
 
 ## games
 column name  | data type | details
