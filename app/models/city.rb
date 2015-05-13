@@ -14,4 +14,5 @@ class City < ActiveRecord::Base
   validates :img_url, presence: true
 
   has_many :users
+  has_many :events
 end

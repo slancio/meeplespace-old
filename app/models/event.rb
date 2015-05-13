@@ -25,6 +25,8 @@ class Event < ActiveRecord::Base
     primary_key: :id,
     inverse_of: :hosted_events
 
+  belongs_to :city
+
   default_scope { order(date: :desc) }
 
 end
