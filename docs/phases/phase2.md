@@ -8,7 +8,7 @@
 ### Controllers
 
 Api::UsersController (create, destroy, index, show)
-Api::EventsController (create, destroy, index, show)
+Api::EventsController (create, destroy, index, edit, update, show)
 Api::GameController (create, show)
 
 ### Views
