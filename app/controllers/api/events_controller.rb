@@ -1,5 +1,5 @@
 module Api
-  class EventsConroller < ApplicationController
+  class EventsController < ApiController
     before_action :require_signed_in!, except: [:show, :index]
     before_action :require_host, except: [:show, :index]
 

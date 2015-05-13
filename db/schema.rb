@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513160551) do
+ActiveRecord::Schema.define(version: 20150513185728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150513160551) do
   add_index "cities", ["name"], name: "index_cities_on_name", unique: true, using: :btree
 
   create_table "events", force: :cascade do |t|
-    t.date     "date",                             null: false
+    t.datetime "date",                             null: false
     t.string   "location",                         null: false
     t.boolean  "location_privacy", default: false, null: false
     t.integer  "slots",                            null: false

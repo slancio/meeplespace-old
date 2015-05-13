@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resource :session
 
   namespace :api, defaults: { format: :json } do
-    resource :events, except: [:new, :edit]
+    resources :events, except: [:new, :edit]
   end
 end

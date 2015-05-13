@@ -5,5 +5,4 @@ json.events @events do |event|
   json.location_privacy event.location_privacy
   json.slots event.slots
   json.host_id event.host_id
-  json.game_id event.game_id
 end
