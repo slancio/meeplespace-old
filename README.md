@@ -50,7 +50,7 @@ I will implement user authentication in Rails based on the practices learned at 
 
 ### Phase 2: Creating Events (~2 days)
 I will allow users to make themselves a host and
-create events through API routes and Backbone views. By the end of this phase, users will be able to create and view events.  Games will be given just a string (address) location for now until Google API lookups are implemented in a later phase.
+create events through API routes and Backbone/Marionette views. By the end of this phase, users will be able to create and view events.  Games will be given just a string (address) location for now until Google API lookups are implemented in a later phase.
 
 [Details][phase-two]
 
